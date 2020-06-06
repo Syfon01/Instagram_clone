@@ -3,15 +3,6 @@ const mongoose = require('mongoose')
 const app = express()
 const { MongoUri } = require('./keys')
 const port = 5000
-require('./model/users')
-
-
-
-
-app.use(express.json())
-
-app.use(require('./routes/auth'))
-
 
 mongoose.connect(MongoUri, {
   useUnifiedTopology: true,
@@ -19,12 +10,21 @@ mongoose.connect(MongoUri, {
 })
 
 mongoose.connection.on('connected',() => {
-  console.log('connected to mogngodb')
+  console.log('connected to mongodb')
 })
 
 mongoose.connection.on("err", (err) => {
-  console.log("error connecting to mogngodb", err);
+  console.log("error connecting to mongodb", err);
 });
+
+require('./model/users')
+require('./model/post')
+
+
+app.use(express.json())
+
+app.use(require('./routes/auth'))
+app.use(require('./routes/auth'))
 
 
 // app.get('/', (rep, res) => { 
