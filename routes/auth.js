@@ -5,7 +5,12 @@ const router = express.Router();
 const mongoose = require('mongoose')
 const User = mongoose.model('User')
 
-const {Jwt_secret} = require('../keys')
+const { Jwt_secret } = require('../keys')
+const login = require('../middleware/login')
+
+router.get('/protected', login, (req, res) => {
+  res.send('This is protected')
+})
 router.get('/', (req, res) => {
   res.send('Hello there')
 })
