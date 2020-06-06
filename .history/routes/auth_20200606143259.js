@@ -40,7 +40,7 @@ router.post('/register', (req, res) => {
   })
 })
 
-router.post('/login', (req, res) => {
+router.post('/login', (reg, res) => {
   const { email, password } = req.body 
   if (!email || !password) {
     router.status(422).json({error: 'Please enter email and password'})
@@ -48,7 +48,7 @@ router.post('/login', (req, res) => {
   User.findOne({ email: email })
     .then(SavedUser => {
       if (!SavedUser) {
-      res.status(422).json({ error: "Invalid email or password" });
+      router.status(422).json({ error: "Invalid email or password" });
       }
       bcrypt.compare(password, SavedUser.password)
         .then(doMatch => {
@@ -56,11 +56,11 @@ router.post('/login', (req, res) => {
           res.json({message: 'Login successfully'})
           }
           else {
-          res.status(422).json({ error: "Invalid email or password" });
+          router.status(422).json({ error: "Invalid email or password" });
           }
         })
         .catch(err => {
-        console.log(err)
+        console.log
       })
   })
 })
