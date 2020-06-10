@@ -49,7 +49,7 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res) => {
   const { email, password } = req.body 
   if (!email || !password) {
-    router.status(422).json({error: 'Please enter email and password'})
+    res.status(422).json({error: 'Please enter email and password'})
   }
   User.findOne({ email: email })
     .then(SavedUser => {
