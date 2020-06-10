@@ -44,4 +44,5 @@ router.get('/mypost', login,(req, res) => {
       })
   })
 })
+
 module.exports = router
