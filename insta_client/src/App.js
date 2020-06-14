@@ -10,7 +10,7 @@ import Register from './components/auth/Register'
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <BrowserRouter>
         <NavBar />
         <Route exact path="/">
