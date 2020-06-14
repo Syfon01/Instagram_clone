@@ -29,3 +29,15 @@ a{
   font-weight: 600;
   padding-left: 4px;;
 }
+.app{
+  /* padding: 0 2rem; */
+}
+.gallery{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  width: 15%;
+}
