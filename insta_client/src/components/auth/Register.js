@@ -12,7 +12,7 @@ const Register = () => {
         
         <input type="password" placeholder="password" />
         
-        <button className="btn waves-effect waves-light #90caf9 blue lighten-3"
+        < button className = "btn waves-effect waves-light #90caf9 blue lighten-3 btn-auth"
           type="submit " name="action">
           Register
           </button>

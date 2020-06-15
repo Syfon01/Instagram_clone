@@ -2,7 +2,10 @@ import React from 'react'
 
 const profile = () => {
   return (
-    <div>
+    <div style={{
+      maxWidth: '650px',
+      margin:'0px auto'
+    }}>
       <div style={{
           margin: '18px 0px',
           display: 'flex',
@@ -36,11 +39,11 @@ const profile = () => {
       </div>
       
       <div className="gallery">
-        < img className="gallery-image" src="https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
+          <img className="gallery-image" src="https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
           <img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
-          < img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
-          < img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
-          < img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
+          <img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
+          <img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
+          <img className="gallery-image" src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="" />
         
       </div>
     </div>

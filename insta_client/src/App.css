@@ -39,5 +39,8 @@ a{
 }
 
 .gallery-image {
-  width: 15%;
+  width: 28%;
+}
+.btn-auth{
+  width:100%;
 }
