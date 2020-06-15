@@ -49,6 +49,8 @@ a{
   height:max-content;
   margin: 1.875rem auto;
 }
-.home{
-  
+#toast-container{
+  top:30px;
+  left: auto;
+  right: 20px;
 }
