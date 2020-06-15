@@ -6,10 +6,11 @@ const Home = () => {
       <div className="card home-card">
       <h5>Syfon Isaac</h5>
         <div className="card-image">
-          < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" / >
+          < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png"
+          alt = "user-img" />
         </div>
         <div className="card-content">
-          <i class="material-icons" style={{color:'red'}}>favorite</i>
+          <i className="material-icons" style={{color:'red'}}>favorite</i>
           <h5>Title</h5>
           <p>What is this about</p>
           <input type="text" placeholder="Add a comment"/>
@@ -19,10 +20,11 @@ const Home = () => {
         <div className="card home-card">
         <h5>Syfon Isaac</h5>
         <div className="card-image">
-          < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" / >
+          < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png"
+          alt = "user-img" />
         </div>
         <div className="card-content">
-          <i class="material-icons" style={{color:'red'}}>favorite</i>
+          <i className="material-icons" style={{color:'red'}}>favorite</i>
           <h5>Title</h5>
           <p>What is this about</p>
           <input type="text" placeholder="Add a comment"/>
@@ -32,10 +34,10 @@ const Home = () => {
         <div className="card home-card">
         <h5>Syfon Isaac</h5>
         <div className="card-image">
-          < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" / >
+          < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png" alt="user-img" />
         </div>
         <div className="card-content">
-          <i class="material-icons" style={{color:'red'}}>favorite</i>
+          <i className="material-icons" style={{color:'red'}}>favorite</i>
           <h5>Title</h5>
           <p>What is this about</p>
           <input type="text" placeholder="Add a comment"/>

@@ -3,11 +3,11 @@ import React from 'react'
 const profile = () => {
   return (
     <div style={{
-      maxWidth: '650px',
+      maxWidth: '40.625rem',
       margin:'0px auto'
     }}>
       <div style={{
-          margin: '18px 0px',
+          margin: '1.125rem 0rem',
           display: 'flex',
         justifyContent: 'space-around',
           borderBottom: '1px solid #f3f3f3'
@@ -16,9 +16,9 @@ const profile = () => {
         < img src = "https://res.cloudinary.com/syfon/image/upload/v1589645160/userimage.png"
         alt="" style = {
           {
-            width: "160px",
-            height: "160px",
-            borderRadius: "80px",
+            width: "10rem",
+            height: "10rem",
+            borderRadius: "5rem",
             border: "2px solid #f1f1f1"
           }
         }
