@@ -44,3 +44,11 @@ a{
 .btn-auth{
   width:100%;
 }
+.home-card{
+  max-width: 500px;
+  height:max-content;
+  margin: 30px auto;
+}
+.home{
+  
+}
