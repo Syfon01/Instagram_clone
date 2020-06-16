@@ -32,7 +32,8 @@ const Register = () => {
           M.toast({ html: data.message, classes: "#1b5e20 green darken-4" });
           history.push('/login')
         }
-      // console.log(data)
+      }).catch(err => {
+      console.log(err)
     })
   }
   return (
