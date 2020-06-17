@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import M from 'materialize-css'
 import {history, useHistory} from 'react-router-dom'
 
@@ -8,7 +8,38 @@ const CreatePost = () => {
   const [body, setBody] = useState('')
   const [image, setImage] = useState('')
   const [url, setUrl] = useState('')
-
+  useEffect(() => {
+    if (url) {
+      fetch('/create/post', {
+        method: 'post',
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + localStorage.getItem('jwt')
+        },
+        body: JSON.stringify({
+          title,
+          body,
+          pic: url,
+        })
+      }).then(res => res.json())
+        .then(data => {
+          if (data.error) {
+            M.toast({
+              html: data.error,
+              classes: "#b71c1c red darken-4"
+            });
+          } else {
+            M.toast({
+              html: 'Post Created successfully',
+              classes: "#1b5e20 green darken-4"
+            });
+            history.push('/')
+          }
+        }).catch(err => {
+          console.log(err)
+        })
+    }
+  },[url]) 
   const sendDetails = () => {
     const data = new FormData()
     data.append('file',image)
@@ -21,34 +52,7 @@ const CreatePost = () => {
       .then(data => {setUrl(data.url)})
       .catch(err => console.log(err))
     
-    fetch('/create/post', {
-        method: 'post',
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer "+localStorage.getItem('jwt')
-        },
-        body: JSON.stringify({
-          title,
-          body,
-          pic:url,
-        })
-      }).then(res => res.json())
-      .then(data => {
-        if (data.error) {
-          M.toast({
-            html: data.error,
-            classes: "#b71c1c red darken-4"
-          });
-        } else {
-          M.toast({
-            html: 'Post Created successfully',
-            classes: "#1b5e20 green darken-4"
-          });
-          history.push('/')
-        }
-      }).catch(err => {
-        console.log(err) 
-      })
+    
   }
   return (
     <div style={{
