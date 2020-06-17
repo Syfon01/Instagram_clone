@@ -24,7 +24,8 @@ const CreatePost = () => {
     fetch('/create/post', {
         method: 'post',
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Authorization": "Bearer "+localStorage.getItem('jwt')
         },
         body: JSON.stringify({
           title,
@@ -46,10 +47,8 @@ const CreatePost = () => {
           history.push('/')
         }
       }).catch(err => {
-        console.log(err)
+        console.log(err) 
       })
-
-
   }
   return (
     <div style={{
